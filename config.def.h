@@ -5,11 +5,19 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font =
+    "FiraCode Nerd Font:pixelsize=16:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+    "JetBrainsMono Nerd Font:pixelsize=16:antialias=true:autohint=true",
+    // "RobotoMono Nerd Font:pixelsize=16:antialias=true:autohint=true",
+    "Material Icons:pixelsize=16:antialias=true:autohint=true",
+    "Feather:pixelsize=16:antialias=true:autohint=true",
+    "Microsoft YaHei:pixelsize=16:antialias=true:autohint=true",
+    "Noto Color Emoji:pixelsize=16:antialias=true:autohint=true",
+    /*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true",
+     */
+    /*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 };
 
 static int borderpx = 2;
@@ -66,7 +74,7 @@ static double maxlatency = 33;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 800;
+static unsigned int blinktimeout = 400;
 
 /*
  * thickness of underline and bar cursors
@@ -100,7 +108,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.65;
+float alpha = 0.85;
 
 typedef struct {
   const char *const colors[258]; /* terminal colors */
@@ -116,7 +124,7 @@ typedef struct {
  */
 static const ColorScheme schemes[] = {
     // st (dark)
-    {{"black", "red3", "green3", "yellow3", "blue2", "magenta3", "cyan3",
+    {{"#2e3440", "red3", "green3", "yellow3", "blue2", "magenta3", "cyan3",
       "gray90", "gray50", "red", "green", "yellow", "#5c5cff", "magenta",
       "cyan", "white", [256] = "#cccccc", "#555555"},
      7,
@@ -170,7 +178,7 @@ static const ColorScheme schemes[] = {
      257},
 
     // Gruvbox dark
-    {{"#282828", "#cc241d", "#98971a", "#d79921", "#458588", "#b16286",
+    {{"#2e3440", "#cc241d", "#98971a", "#d79921", "#458588", "#b16286",
       "#689d6a", "#a89984", "#928374", "#fb4934", "#b8bb26", "#fabd2f",
       "#83a598", "#d3869b", "#8ec07c", "#ebdbb2", [256] = "#ebdbb2", "#555555"},
      15,
@@ -220,8 +228,8 @@ static Rune stcursor = 0x2603; /* snowman ("☃") */
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 80;
-static unsigned int rows = 24;
+static unsigned int cols = 120;
+static unsigned int rows = 36;
 
 /*
  * Default colour and shape of the mouse cursor
